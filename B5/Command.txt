@@ -1,0 +1,8 @@
+python -m startproject project1
+python manage.py runserver 
+python manage.py startapp app1
+
+views->url->settings
+
+return httpResponse("<h1>Hello</h1>")
+return render(request,"filename.html")
