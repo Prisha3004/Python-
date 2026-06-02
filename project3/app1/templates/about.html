@@ -1,0 +1,24 @@
+{% extends 'nav.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="color:blue">About page</h1>
+    {{id}}
+    {{name}}
+    <h2>Data:{{data}}</h2>
+    <h2>name:{{data.name}}</h2>
+    <h2>id:{{data.id}}</h2>
+    <button><a href='/app1/course/'>Go to course page</a></button>
+    <button><a href='/app1/'>Back to home page</a></button>
+</body>
+
+</html>
+{% endblock body %}

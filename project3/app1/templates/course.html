@@ -1,0 +1,62 @@
+{% extends 'nav.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Course page</h1>
+    <ul>
+        <!-- <li>Courses</li>
+        <li>Course id:{{id}}</li>
+        <li>Duration:{{d}}</li>
+        <li>Fees:{{fees}}</li>
+        <li>Result:{{result}}</li>
+        <li>Data:</li>
+        {% if result >= 50 %}
+        <h3>result - {{result}}: "Advance python course"</h3>
+        {% elif result >= 40 %}
+        <h3>Enroll python </h3>
+        {% else %}
+        <h3>Not eligible</h3>
+        {% endif %}
+
+        <h3>{{data}}</h3>
+        <h3>Course names:</h3>
+        {% for i in data.cname %}
+        <ul>
+            <li>
+                {{i}}
+            </li>
+        </ul>
+        {% endfor %}
+
+        <h3>Course fees</h3>
+        {% for i in data.cfees %}
+        <ul>
+            <li>
+                {{i}}
+            </li>
+        </ul>
+        {% endfor %} -->
+
+        <h3>Course details</h3>
+        {% for i,j in data.items%}
+        <ul>
+            <li>
+                {{i}} : {{j}}
+            </li>
+        </ul>
+        {% endfor %}
+    </ul>
+
+    <button><a href='/app1/about/'>Go to about page</a></button>
+    <button><a href='/app1/'>Back to home page</a></button>
+
+</html>
+{% endblock body %}
