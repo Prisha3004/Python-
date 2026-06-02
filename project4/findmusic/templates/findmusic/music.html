@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Find your song!!!</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        Song:<input type="text" name="song" class="song" id="song" />
+        Artist:<input type="text" name="artist" class="artist" id="artist" />
+        Year:<input type="number" name="year" class="year" id="year" />
+        Album:<input type="text" name="album" class="album" id="album" />
+        <button type="submit">Submit</button>
+    </form>
+    <table style="border:2px solid black">
+        <tr>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Year</th>
+            <th>Album</th>
+        </tr>
+        {% for music in music_records %}
+        <tr>
+            <td> {{music.song}} </td>
+            <td> {{music.artist}} </td>
+            <td> {{music.year}} </td>
+            <td> {{music.album}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
